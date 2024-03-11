@@ -1,0 +1,546 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Bebas Neue", sans-serif;
+    color: #fff;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: #000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 50px;
+    color: #fff;
+    background: transparent;
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+}
+
+nav img {
+    /* display: none; */
+    width: 120px;
+    height: auto;
+}
+
+.search {
+    height: 30px;
+    width: 30px;
+}
+
+
+.links ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.wind p {
+    font-size: 12px;
+    font-weight: 500;
+    /* color: #fff; */
+}
+
+.wind p span {
+    font-weight: 1000;
+}
+
+.temp {
+    justify-content: space-between;
+}
+
+.temp p {
+    font-size: 16px;
+}
+
+.marsIntro {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.marsIntro img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+.marsIntro img:nth-child(2) {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+.marsIntro .text {
+    position: absolute;
+    z-index: 1;
+    flex-direction: column;
+    color: #fff;
+    margin: 100px 0;
+}
+
+.marsIntro .text p {
+    font-size: 28px;
+    letter-spacing: 10px;
+}
+
+.marsIntro .text h1 {
+    font-size: 160px;
+}
+
+.marsIntro .astroImage {
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+.gradient {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
+
+.specs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0 120px;
+}
+
+.spec {
+    border: 1px solid #B79A88;
+    padding: 10px;
+}
+
+.specText {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.specText i {
+    color: #B79A88;
+}
+
+.spec p {
+    color: #B79A88;
+    font-size: 12px;
+}
+
+.specText p {
+    font-size: 16px;
+}
+
+.heading {
+    flex-direction: column;
+    margin: 100px 0;
+}
+
+.heading h2 {
+    font-size: 36px;
+}
+
+.heading p {
+    color: #B79A88;
+}
+
+.adventures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px 100px;
+    gap: 100px;
+}
+
+.adventure:nth-child(1) {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/Apollo-rover.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.adventure:nth-child(2) {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/car-on-mars.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.adventure:nth-child(3) {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/ocean.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.adventure {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.adventure .text {
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.adventure img {
+    width: 50%;
+    position: absolute;
+    top: -50px;
+}
+
+.adventure:nth-child(2) img {
+    width: 60%;
+    top: -65px;
+}
+
+.adventure button {
+    background-color: #B79A88;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+}
+
+.bioSuit {
+    display: flex;
+    padding: 50px 100px;
+}
+
+.suitImage {
+    width: 60%;
+}
+
+.suitImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.suitText {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.enhacedLuxury {
+    color: #B79A88;
+    font-size: 12px;
+}
+
+.suitText .title {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    border-bottom: 1px solid #B79A88;
+    padding: 10px 0;
+}
+
+.suitText .title h2 {
+    font-size: 36px;
+    line-height: 35px;
+}
+
+.suitText .title p {
+    color: #B79A88;
+    letter-spacing: 3px;
+}
+
+.suitText hr {
+    width: 10%;
+    background-color: #B79A88;
+}
+
+.suitText .description {
+    width: 80%;
+    align-self: end;
+    margin-top: 20px;
+}
+
+.suitText .description .desc {
+    font-size: 12px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    color: #B79A88;
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+}
+
+.highlight {
+    border: 1px solid #B79A88;
+    height: 100px;
+    flex-direction: column;
+}
+
+.highlight h2 {
+    font-size: 30px;
+}
+
+.highlight p {
+    font-family: "Bebas Neue";
+    color: #B79A88;
+}
+
+.btn {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    justify-content: space-between;
+}
+
+.btn button {
+    border: 1px solid #B79A88;
+    padding: 10px 30px;
+    background-color: transparent;
+    width: 80%;
+    color: #B79A88;
+}
+
+.btn .iconBtn {
+    border: 1px solid #B79A88;
+    width: 20%;
+    height: 100%;
+}
+
+.outerWorlds {
+    /* background-color: red; */
+}
+
+.worldNav {
+    /* background-color: red; */
+}
+
+.worldNav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    width: 70%;
+    border-bottom: 1px solid #B79A88;
+}
+
+.worldNav ul li {
+    padding: 20px 10px;
+}
+
+.worldNav ul li:nth-child(2) {
+    border-bottom: 3px solid #B79A88;
+    height: 100%;
+}
+
+.planetDescription {
+    display: flex;
+    padding: 50px 100px;
+}
+
+.planetText {
+    width: 40%;
+}
+
+.planetText .title {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.planetText .title h2 {
+    font-size: 36px;
+    line-height: 35px;
+}
+
+.planetText .title p {
+    color: #B79A88;
+    letter-spacing: 3px;
+}
+
+.description {
+    align-self: end;
+    margin-top: 20px;
+}
+
+.planetDescription .description .desc {
+    font-size: 12px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    color: #B79A88;
+}
+
+.planetDescription .btn {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.planetDescription .btn button {
+    width: 70%;
+}
+
+.planetDescription .iconBtn {
+    border: 1px solid #B79A88;
+    width: 15%;
+    height: 100%;
+}
+
+.planetImage {
+    width: 60%;
+}
+
+.planetImage img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.testimonials {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+}
+
+.topTestimonials {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+
+.testimonials img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.bottomTestimonials {
+    background-color: red;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.bottomTestimonials img:nth-child(2) {
+    height: 110%;
+}
+
+.topTestimonials img:nth-child(2) {
+    height: 110%;
+}
+
+.testimonials .texts {
+    padding: 100px;
+}
+
+.testimonials .texts .testimonialHeading {
+    color: #B79A88;
+    letter-spacing: 3px;
+}
+
+.testimonials .title {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #B79A88;
+}
+
+.testimonials .title .btns {
+    display: flex;
+    width: 20%;
+}
+
+.testimonials .title .btns .iconBtn {
+    display: flex;
+    border: 1px solid #B79A88;
+    width: 50%;
+}
+
+.testimonials hr {
+    background-color: #B79A88;
+    width: 20%;
+}
+
+.testimonials p {
+    font-family: sans-serif;
+    color: #B79A88;
+}
+
+.trips {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 50px 150px;
+}
+
+.trip {
+    flex-direction: column;
+}
+
+.trip img {
+    width: 30%;
+    height: auto;
+}
+
+.trip a {
+    font-size: 8px;
+}
+
+.trip h2 {
+    font-size: 24px;
+    color: #B79A88;
+    margin: 10px;
+}
+
+.trip p {
+    font-size: 12px;
+    padding: 0 30px;
+    color: #B79A88;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images//Half-Moon.png');
+    background-position: top;
+    background-size: cover;
+    height: 100vh;
+    flex-direction: column;
+}
+
+footer img {
+    width: 20%;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 50%;
+    margin: 20px 0;
+}
